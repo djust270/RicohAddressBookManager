@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+<s:Body>
+<m:terminateSession xmlns:m="http://www.ricoh.co.jp/xmlns/soap/rdh/udirectory">
+<sessionId></sessionId>
+</m:terminateSession>
+</s:Body>
+</s:Envelope>

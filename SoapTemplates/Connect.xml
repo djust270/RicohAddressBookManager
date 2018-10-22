@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+<s:Body>
+<m:startSession xmlns:m="http://www.ricoh.co.jp/xmlns/soap/rdh/udirectory">
+<stringIn></stringIn>
+<timeLimit>30</timeLimit>
+<lockMode>X</lockMode>
+</m:startSession>
+</s:Body>
+</s:Envelope>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+<s:Body>
+<m:getObjectsProps xmlns:m="http://www.ricoh.co.jp/xmlns/soap/rdh/udirectory">
+<sessionId></sessionId>
+<objectIdList xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:itt="http://www.w3.org/2001/XMLSchema" xsi:type="soap-enc:Array" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:t="http://www.ricoh.co.jp/xmlns/schema/rdh/commontypes" xsi:arrayType="">
+</objectIdList>
+<selectProps xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:itt="http://www.w3.org/2001/XMLSchema" xsi:type="soap-enc:Array" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:t="http://www.ricoh.co.jp/xmlns/schema/rdh/commontypes" xsi:arrayType="itt:string[14]">
+<item>entryType</item>
+<item>id</item>
+<item>index</item>
+<item>name</item>
+<item>longName</item>
+<item>auth:name</item>
+<item>mail:address</item>
+<item>fax:number</item>
+<item>remoteFolder:type</item>
+<item>remoteFolder:serverName</item>
+<item>remoteFolder:path</item>
+<item>remoteFolder:accountName</item>
+<item>remoteFolder:password</item>
+<item>remoteFolder:port</item>
+</selectProps>
+<options xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:itt="http://www.ricoh.co.jp/xmlns/schema/rdh/commontypes" xsi:type="soap-enc:Array" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:t="http://www.ricoh.co.jp/xmlns/schema/rdh/commontypes" xsi:arrayType="itt:property[1]">
+<item>
+ <propName></propName>
+ <propVal></propVal>
+</item>
+</options>
+</m:getObjectsProps>
+</s:Body>
+</s:Envelope>
