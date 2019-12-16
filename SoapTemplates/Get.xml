@@ -13,6 +13,7 @@
 <item>longName</item>
 <item>auth:name</item>
 <item>mail:address</item>
+<item>tagId</item>
 <item>fax:number</item>
 <item>remoteFolder:type</item>
 <item>remoteFolder:serverName</item>
