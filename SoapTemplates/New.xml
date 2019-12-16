@@ -75,6 +75,10 @@
 <propName>remoteFolder:passwordEncoding</propName>
 <propVal></propVal>
 </item>
+<item>
+<propName>tagId</propName>
+<propVal></propVal>
+</item>
 </item>
 </propListList>
 </m:putObjects>
