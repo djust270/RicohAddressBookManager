@@ -489,6 +489,7 @@ function Get-Entries {
                 UserCode  =      ( ForEach-Object { $_.item } | Where-Object { $_.propName -eq 'auth:name'    } ).propVal
                 Mail      =      ( ForEach-Object { $_.item } | Where-Object { $_.propName -eq 'mail:address' } ).propVal
                 FaxNumber =      ( ForEach-Object { $_.item } | Where-Object { $_.propName -eq 'fax:number'   } ).propVal
+                Title1     =      ( ForEach-Object { $_.item } | Where-Object { $_.propName -eq 'tagId'        } ).propVal
                 <#Folder    = New-Object -TypeName psobject -Property @{
                     Type      =      ( ForEach-Object { $_.item } | Where-Object { $_.propName -eq 'remoteFolder:type' } ).propVal
                     Server    =      ( ForEach-Object { $_.item } | Where-Object { $_.propName -eq 'remoteFolder:serverName' } ).propVal
@@ -544,6 +545,9 @@ function Get-Entries {
 
 .PARAMETER FaxNumber
     Fax Number of entry.
+    
+.PARAMETER Title1
+    Title 1 of entry - value of 1-11 corresponding to the list of values in the admin interface.
 
 .PARAMETER Hostname
     Hostname or IP Address of the copier to connect to.
@@ -592,6 +596,10 @@ function New-Entry {
         [ValidateNotNullOrEmpty()]
         [string]
         $FaxNumber,
+        
+        [ValidateNotNullOrEmpty()]
+        [string]
+        $Title1,
 
         [ValidatePattern('^\\\\|^ftp://')]
         [ValidateNotNullOrEmpty()]
@@ -801,7 +809,10 @@ function New-Entry {
             
         }
         
-        # creat the property count
+        # set the tagId value
+        $NewXml.Envelope.Body.putObjects.propListList.item.item[17].propVal = $Title1
+        
+        # create the property count
         $NewXml.Envelope.Body.putObjects.propListList.arrayType = "itt:string[][$($NewXml.Envelope.Body.putObjects.propListList.item.item.count)]"
 
         # build the webrequest
